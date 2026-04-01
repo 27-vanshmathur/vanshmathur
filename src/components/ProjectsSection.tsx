@@ -15,19 +15,6 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "Influencer Marketing Campaign – Jio",
-    tag: "Digital Strategy",
-    brief: "Designed and executed an influencer-led campaign to drive app downloads and brand awareness among Gen Z.",
-    tabs: {
-      overview:
-        "Jio wanted to amplify reach among 18-24 year olds in tier-2 cities. Traditional ads weren't resonating. The challenge: build authentic engagement through trusted voices.",
-      thinking:
-        "I identified that this audience trusts micro-influencers over celebrities. I segmented influencers by regional relevance, negotiated partnerships, and created content briefs aligned with platform-specific formats (Reels, Stories, YouTube Shorts).",
-      outcome:
-        "Campaign reached an estimated 2M+ impressions with a 4.5% engagement rate — 2x the industry average. App install attribution showed a 30% lift during the campaign window.",
-    },
-  },
-  {
     title: "Retail Behavior Analysis – Haldiram's / Samsung / Decathlon",
     tag: "Consumer Insights",
     brief: "Analyzed in-store consumer behavior patterns to optimize product placement and promotional strategies.",
@@ -43,27 +30,14 @@ const projects: Project[] = [
   {
     title: "NGO Branding Strategy",
     tag: "Brand Building",
-    brief: "Repositioned an NGO's brand identity to attract more donors and volunteers through storytelling.",
+    brief: "Repositioned an NGO's brand identity to attract more donations and volunteers through storytelling.",
     tabs: {
       overview:
-        "The NGO had strong impact but weak visibility. Their messaging was functional, not emotional. Donors couldn't connect with the cause on a personal level.",
+        "The NGO had strong impact but weak visibility. Their messaging was functional, not emotional. Potential supporters couldn't connect with the cause on a personal level.",
       thinking:
-        "I applied the 'Hero's Journey' framework to their communication — making the beneficiary the hero and the donor the enabler. Redesigned visual identity to feel hopeful yet urgent.",
+        "I applied the 'Hero's Journey' framework to their communication — making the beneficiary the hero and the supporter the enabler. Redesigned visual identity to feel hopeful yet urgent.",
       outcome:
-        "Social media following grew 3x in 4 months. Donor inquiry rate increased by an estimated 40%. The new brand kit became their standard for all future communications.",
-    },
-  },
-  {
-    title: "Digital Campaign Optimization",
-    tag: "Performance Marketing",
-    brief: "Optimized digital ad campaigns through A/B testing, audience segmentation, and data analysis.",
-    tabs: {
-      overview:
-        "A D2C brand was spending heavily on Meta & Google Ads but CPA was unsustainably high. They needed smarter spending, not more spending.",
-      thinking:
-        "I audited their ad accounts, identified audience overlap waste, restructured campaigns with proper exclusions, and introduced creative testing frameworks with clear hypotheses.",
-      outcome:
-        "Reduced CPA by an estimated 35% while maintaining conversion volume. ROAS improved from 2.1x to 3.8x over 6 weeks of iterative optimization.",
+        "Social media following grew 3x in 1 month. Donation inquiry rate increased by an estimated 40%. The new brand kit became their standard for all future communications.",
     },
   },
 ];
