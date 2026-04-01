@@ -21,7 +21,7 @@ const AboutSection = () => {
 
         <div className="glass-card p-8 card-lift">
           <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-            I'm a marketing strategist who blends <span className="text-primary font-semibold">consumer psychology</span> with <span className="text-secondary font-semibold">data-driven insights</span> to build brands that resonate. I don't just follow trends — I decode why people buy, click, and stay loyal.
+            I'm a marketing strategist who blends <span className="text-primary font-semibold">customer behavior</span> with <span className="text-secondary font-semibold">data-driven insights</span> to build brands that resonate. I don't just follow trends — I decode why people buy, click, and stay loyal.
           </p>
 
           <AnimatePresence>
