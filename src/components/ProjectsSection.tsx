@@ -15,19 +15,6 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "Influencer Marketing Campaign – Jio",
-    tag: "Digital Strategy",
-    brief: "Designed and executed an influencer-led campaign to drive app downloads and brand awareness among Gen Z.",
-    tabs: {
-      overview:
-        "Jio wanted to amplify reach among 18-24 year olds in tier-2 cities. Traditional ads weren't resonating. The challenge: build authentic engagement through trusted voices.",
-      thinking:
-        "I identified that this audience trusts micro-influencers over celebrities. I segmented influencers by regional relevance, negotiated partnerships, and created content briefs aligned with platform-specific formats (Reels, Stories, YouTube Shorts).",
-      outcome:
-        "Campaign reached an estimated 2M+ impressions with a 4.5% engagement rate — 2x the industry average. App install attribution showed a 30% lift during the campaign window.",
-    },
-  },
-  {
     title: "Retail Behavior Analysis – Haldiram's / Samsung / Decathlon",
     tag: "Consumer Insights",
     brief: "Analyzed in-store consumer behavior patterns to optimize product placement and promotional strategies.",
