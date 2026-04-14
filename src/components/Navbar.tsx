@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { Sun, Moon } from "lucide-react";
 
 const navLinks = [
   { label: "About", id: "about" },
