@@ -21,7 +21,7 @@ const AboutSection = () => {
 
         <div className="glass-card p-8 card-lift">
           <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-            I'm a marketing strategist who blends <span className="text-primary font-semibold">customer behavior</span> with <span className="text-secondary font-semibold">data-driven insights</span> to build brands that resonate. I don't just follow trends — I decode why people buy, click, and stay loyal.
+            I'm a PGDM student at <span className="text-primary font-semibold">FIIB</span> with a strong interest in <span className="text-primary font-semibold">marketing strategy</span>, <span className="text-secondary font-semibold">brand building</span>, and <span className="text-primary font-semibold">customer behavior</span>. I enjoy understanding how people think and using that insight to create better marketing decisions.
           </p>
 
           <AnimatePresence>
