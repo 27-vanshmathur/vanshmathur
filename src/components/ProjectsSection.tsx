@@ -30,14 +30,14 @@ const projects: Project[] = [
   {
     title: "NGO Branding Strategy",
     tag: "Brand Building",
-    brief: "Repositioned an NGO's brand identity to attract more donations and volunteers through storytelling.",
+    brief: "Improved an NGO's visual identity and online presence to boost outreach and engagement.",
     tabs: {
       overview:
-        "The NGO had strong impact but weak visibility. Their messaging was functional, not emotional. Potential supporters couldn't connect with the cause on a personal level.",
+        "Low visibility and weak communication with audience. The NGO had strong impact but needed better branding and outreach to connect with supporters.",
       thinking:
-        "I applied the 'Hero's Journey' framework to their communication — making the beneficiary the hero and the supporter the enabler. Redesigned visual identity to feel hopeful yet urgent.",
+        "Improve visual identity and online presence. I designed a brochure, created social media content, and helped in campaign coordination to strengthen their communication.",
       outcome:
-        "Social media following grew 3x in 1 month. Donation inquiry rate increased by an estimated 40%. The new brand kit became their standard for all future communications.",
+        "Better outreach and engagement, supporting 200+ beneficiaries. Social media following grew 3x in 1 month.",
     },
   },
 ];

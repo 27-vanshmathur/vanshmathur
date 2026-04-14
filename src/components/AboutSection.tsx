@@ -21,7 +21,7 @@ const AboutSection = () => {
 
         <div className="glass-card p-8 card-lift">
           <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-            I'm a marketing strategist who blends <span className="text-primary font-semibold">customer behavior</span> with <span className="text-secondary font-semibold">data-driven insights</span> to build brands that resonate. I don't just follow trends — I decode why people buy, click, and stay loyal.
+            I'm a PGDM student at <span className="text-primary font-semibold">FIIB</span> with a strong interest in <span className="text-primary font-semibold">marketing strategy</span>, <span className="text-secondary font-semibold">brand building</span>, and <span className="text-primary font-semibold">customer behavior</span>. I enjoy understanding how people think and using that insight to create better marketing decisions.
           </p>
 
           <AnimatePresence>
@@ -35,13 +35,13 @@ const AboutSection = () => {
               >
                 <div className="space-y-4 text-muted-foreground leading-relaxed border-t border-border/50 pt-6">
                   <p>
-                    My journey started with a curiosity about why people make the decisions they do. As a student, I dove deep into consumer behavior, behavioral economics, and the science behind attention.
+                    I like working with both creativity and data to solve real business problems. My journey started with a curiosity about why people make the decisions they do.
                   </p>
                   <p>
-                    Through internships at <span className="text-primary">Jio</span>, hands-on retail analysis at brands like <span className="text-primary">Haldiram's</span>, <span className="text-primary">Samsung</span>, and <span className="text-primary">Decathlon</span>, I learned that great marketing isn't about shouting louder — it's about understanding deeper.
+                    I've worked on influencer marketing campaigns, retail analysis, and branding projects, where I focused on improving visibility, engagement, and customer experience.
                   </p>
                   <p>
-                    Today, I approach every marketing challenge with an <span className="text-secondary font-semibold">insights-first mindset</span>: research the audience, find the psychological hook, craft a strategy, and measure impact. That's how I turn brands into movements.
+                    I'm someone who likes to <span className="text-secondary font-semibold">think practically</span>, learn fast, and build ideas that actually work in the real world.
                   </p>
                 </div>
               </motion.div>
