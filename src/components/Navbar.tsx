@@ -102,6 +102,7 @@ const Navbar = () => {
             {isDark ? <Sun size={18} /> : <Moon size={18} />}
           </button>
           <MobileMenu active={active} scrollTo={scrollTo} />
+        </div>
       </div>
     </motion.nav>
   );
