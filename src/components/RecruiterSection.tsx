@@ -13,7 +13,7 @@ const RecruiterSection = () => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 2, type: "spring" }}
         onClick={() => setOpen(true)}
-        className="fixed bottom-6 right-6 z-40 glow-btn bg-secondary text-secondary-foreground px-4 py-3 rounded-full font-semibold text-sm flex items-center gap-2 animate-glow-pulse"
+        className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 glow-btn bg-secondary text-secondary-foreground px-3 py-2.5 sm:px-4 sm:py-3 rounded-full font-semibold text-xs sm:text-sm flex items-center gap-2 animate-glow-pulse"
       >
         <Eye size={16} /> Recruiter? Click This
       </motion.button>
