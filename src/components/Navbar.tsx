@@ -85,8 +85,23 @@ const Navbar = () => {
               {label}
             </button>
           ))}
+          <button
+            onClick={toggleTheme}
+            className="p-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-muted transition-all"
+            aria-label="Toggle theme"
+          >
+            {isDark ? <Sun size={18} /> : <Moon size={18} />}
+          </button>
         </div>
-        <MobileMenu active={active} scrollTo={scrollTo} />
+        <div className="flex items-center gap-1 sm:hidden">
+          <button
+            onClick={toggleTheme}
+            className="p-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-muted transition-all"
+            aria-label="Toggle theme"
+          >
+            {isDark ? <Sun size={18} /> : <Moon size={18} />}
+          </button>
+          <MobileMenu active={active} scrollTo={scrollTo} />
       </div>
     </motion.nav>
   );
