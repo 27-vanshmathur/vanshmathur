@@ -21,7 +21,7 @@ const AboutSection = () => {
 
         <div className="glass-card p-8 card-lift">
           <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-            I'm a PGDM student at <span className="text-primary font-semibold">FIIB</span> with a strong interest in <span className="text-primary font-semibold">marketing strategy</span>, <span className="text-secondary font-semibold">brand building</span>, and <span className="text-primary font-semibold">customer behavior</span>. I enjoy understanding how people think and using that insight to create better marketing decisions.
+            Management graduate currently pursuing a <span className="text-primary font-semibold">Post Graduate Diploma in Management (PGDM)</span> at <span className="text-primary font-semibold">Fortune Institute of International Business (FIIB)</span>, with a strong focus on <span className="text-primary font-semibold">marketing</span>, <span className="text-secondary font-semibold">consumer insights</span>, and <span className="text-primary font-semibold">data-driven decision-making</span>.
           </p>
 
           <AnimatePresence>
@@ -35,13 +35,13 @@ const AboutSection = () => {
               >
                 <div className="space-y-4 text-muted-foreground leading-relaxed border-t border-border/50 pt-6">
                   <p>
-                    I like working with both creativity and data to solve real business problems. My journey started with a curiosity about why people make the decisions they do.
+                    Gained hands-on experience as a <span className="text-secondary font-semibold">Marketing & Growth Intern at Reliance Jio</span>, contributing to influencer marketing campaigns, cross-platform digital promotions, and performance analysis. Worked on campaign metrics, market research, and competitor analysis to support strategies aimed at improving brand visibility and customer engagement.
                   </p>
                   <p>
-                    I've worked on influencer marketing campaigns, retail analysis, and branding projects, where I focused on improving visibility, engagement, and customer experience.
+                    Proficient in <span className="text-primary font-semibold">MS Excel (Advanced)</span>, with working knowledge of <span className="text-primary font-semibold">Power BI</span>, <span className="text-primary font-semibold">Python</span>, and <span className="text-primary font-semibold">Zoho Sheets</span>.
                   </p>
                   <p>
-                    I'm someone who likes to <span className="text-secondary font-semibold">think practically</span>, learn fast, and build ideas that actually work in the real world.
+                    Actively seeking entry-level opportunities in <span className="text-secondary font-semibold">marketing, growth, analytics, or management</span>, where I can apply analytical thinking, contribute to strategic initiatives, and drive meaningful business outcomes.
                   </p>
                 </div>
               </motion.div>

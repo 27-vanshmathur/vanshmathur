@@ -29,7 +29,7 @@ const ContactSection = () => {
     {
       icon: Linkedin,
       label: "Connect on LinkedIn",
-      href: "https://linkedin.com/in/vansh-mathur",
+      href: "https://www.linkedin.com/in/vanshxmathur/",
       copyText: null,
     },
     {
