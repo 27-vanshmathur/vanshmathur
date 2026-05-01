@@ -4,8 +4,7 @@ import { Rocket, Brain, BarChart3 } from "lucide-react";
 
 const roles = [
   "Marketing Strategist",
-  "Customer Behavior Enthusiast",
-  "Brand Growth Specialist",
+  "Content Creator",
   "Data-Driven Thinker",
 ];
 
