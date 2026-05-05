@@ -58,17 +58,8 @@ const HeroSection = () => {
           <span className="gradient-text">Vansh Mathur</span>
         </motion.h1>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
-          className="h-10 mb-10 flex items-center justify-center"
-        >
-          <span className="text-base sm:text-xl lg:text-2xl text-primary font-mono">
-            {displayText}
-          </span>
-          <span className="w-0.5 h-7 bg-primary ml-1 animate-pulse" />
-        </motion.div>
+        <div className="mb-10" />
+
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
