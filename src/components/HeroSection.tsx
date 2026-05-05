@@ -1,40 +1,7 @@
-import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Rocket, Brain, BarChart3 } from "lucide-react";
 
-const roles = [
-  "Marketing Strategist",
-  "Content Creator",
-  "Data-Driven Thinker",
-];
-
 const HeroSection = () => {
-  const [currentRole, setCurrentRole] = useState(0);
-  const [displayText, setDisplayText] = useState("");
-  const [isDeleting, setIsDeleting] = useState(false);
-
-  useEffect(() => {
-    const role = roles[currentRole];
-    const timeout = setTimeout(
-      () => {
-        if (!isDeleting) {
-          setDisplayText(role.substring(0, displayText.length + 1));
-          if (displayText.length === role.length) {
-            setTimeout(() => setIsDeleting(true), 1500);
-          }
-        } else {
-          setDisplayText(role.substring(0, displayText.length - 1));
-          if (displayText.length === 0) {
-            setIsDeleting(false);
-            setCurrentRole((prev) => (prev + 1) % roles.length);
-          }
-        }
-      },
-      isDeleting ? 40 : 80
-    );
-    return () => clearTimeout(timeout);
-  }, [displayText, isDeleting, currentRole]);
-
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
