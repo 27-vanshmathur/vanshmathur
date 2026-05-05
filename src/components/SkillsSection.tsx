@@ -4,9 +4,9 @@ import { Lightbulb, X } from "lucide-react";
 
 const skills = [
   {
-    name: "Customer Behavior",
-    emoji: "🧠",
-    example: "Mapped customer decision journeys at Haldiram's to identify purchase triggers that increased in-store engagement.",
+    name: "Brand Strategy",
+    emoji: "🎯",
+    example: "Developed positioning frameworks for NGO branding that increased donor perception and trust metrics.",
   },
   {
     name: "Brand Strategy",
