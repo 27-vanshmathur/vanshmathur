@@ -1,40 +1,7 @@
-import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Rocket, Brain, BarChart3 } from "lucide-react";
 
-const roles = [
-  "Marketing Strategist",
-  "Content Creator",
-  "Data-Driven Thinker",
-];
-
 const HeroSection = () => {
-  const [currentRole, setCurrentRole] = useState(0);
-  const [displayText, setDisplayText] = useState("");
-  const [isDeleting, setIsDeleting] = useState(false);
-
-  useEffect(() => {
-    const role = roles[currentRole];
-    const timeout = setTimeout(
-      () => {
-        if (!isDeleting) {
-          setDisplayText(role.substring(0, displayText.length + 1));
-          if (displayText.length === role.length) {
-            setTimeout(() => setIsDeleting(true), 1500);
-          }
-        } else {
-          setDisplayText(role.substring(0, displayText.length - 1));
-          if (displayText.length === 0) {
-            setIsDeleting(false);
-            setCurrentRole((prev) => (prev + 1) % roles.length);
-          }
-        }
-      },
-      isDeleting ? 40 : 80
-    );
-    return () => clearTimeout(timeout);
-  }, [displayText, isDeleting, currentRole]);
-
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
@@ -58,17 +25,8 @@ const HeroSection = () => {
           <span className="gradient-text">Vansh Mathur</span>
         </motion.h1>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
-          className="h-10 mb-10 flex items-center justify-center"
-        >
-          <span className="text-base sm:text-xl lg:text-2xl text-primary font-mono">
-            {displayText}
-          </span>
-          <span className="w-0.5 h-7 bg-primary ml-1 animate-pulse" />
-        </motion.div>
+        <div className="mb-10" />
+
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
