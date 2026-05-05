@@ -9,11 +9,6 @@ const skills = [
     example: "Developed positioning frameworks for NGO branding that increased donor perception and trust metrics.",
   },
   {
-    name: "Brand Strategy",
-    emoji: "🎯",
-    example: "Developed positioning frameworks for NGO branding that increased donor perception and trust metrics.",
-  },
-  {
     name: "Data Analysis",
     emoji: "📊",
     example: "Used Excel and analytics tools to measure campaign performance at Jio, optimizing ad spend allocation.",
