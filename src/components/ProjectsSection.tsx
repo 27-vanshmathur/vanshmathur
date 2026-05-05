@@ -235,6 +235,15 @@ const BharatPulseCaseStudy = ({ onClose }: { onClose: () => void }) => (
         <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
           A safety-first smartwatch experience — designed for the moments that matter most.
         </p>
+        <a
+          href="https://wearebharatpulse.lovable.app"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 mt-6 px-5 py-2.5 rounded-full bg-primary text-primary-foreground font-semibold text-sm hover:opacity-90 transition-all"
+        >
+          Visit Live Site <ArrowRight size={14} />
+        </a>
+        <p className="mt-3 text-xs text-muted-foreground">Designed & built by Vansh Mathur</p>
       </div>
       <div className="px-4 sm:px-8">
         <div className="rounded-2xl overflow-hidden border border-border/40 bg-gradient-to-br from-muted/40 to-background">
