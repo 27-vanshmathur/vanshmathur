@@ -6,7 +6,7 @@ const experiences = [
   {
     role: "Summer Intern — Behavioural Finance & Investor Research",
     company: "Bajaj Capital Ltd.",
-    period: "2025",
+    period: "2026",
     contributions: [
       "Led a behavioural research study on investor trust and risk perception toward mutual funds, surveying 100+ retail investors",
       "Designed structured questionnaires and segmented findings across age, income, and risk-appetite cohorts",
