@@ -4,6 +4,19 @@ import { Briefcase, ChevronDown } from "lucide-react";
 
 const experiences = [
   {
+    role: "Summer Intern — Behavioural Finance & Investor Research",
+    company: "Bajaj Capital Ltd.",
+    period: "2025",
+    contributions: [
+      "Led a behavioural research study on investor trust and risk perception toward mutual funds, surveying 100+ retail investors",
+      "Designed structured questionnaires and segmented findings across age, income, and risk-appetite cohorts",
+      "Built an AI-assisted communication workflow using ChatGPT, cutting advisory drafting time by ~40%",
+      "Simplified SIP, NAV, and compounding concepts into plain-language explainers used in walk-in conversations",
+      "Identified 5 dominant behavioural biases driving SIP discontinuation and presented mitigation strategies to senior advisors",
+    ],
+    learning: "Investor decisions are 70% behaviour, 30% numbers — trust is built through clarity, not complexity. AI is a powerful co-pilot for advisory, but only when paired with human empathy.",
+  },
+  {
     role: "Marketing Intern",
     company: "Jio",
     period: "2024",
@@ -13,17 +26,6 @@ const experiences = [
       "Created content strategies for social media platforms with 2M+ reach",
     ],
     learning: "Learned how large-scale campaigns operate and the importance of data in every marketing decision.",
-  },
-  {
-    role: "Retail Consumer Behavior Analyst",
-    company: "Multiple Brands",
-    period: "2023 – 2024",
-    contributions: [
-      "Conducted in-store observational studies at Haldiram's, Samsung, and Decathlon",
-      "Mapped customer decision journeys and identified conversion bottlenecks",
-      "Delivered actionable recommendations that improved impulse purchase rates",
-    ],
-    learning: "Understanding real consumer behavior in physical spaces taught me that data and empathy must work together.",
   },
   {
     role: "Brand Strategist (Pro Bono)",
