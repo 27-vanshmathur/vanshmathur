@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Rocket, Brain, BarChart3 } from "lucide-react";
+import { Rocket, BarChart3 } from "lucide-react";
 
 const HeroSection = () => {
   const scrollTo = (id: string) => {
@@ -39,12 +39,6 @@ const HeroSection = () => {
             className="glow-btn w-full sm:w-auto px-6 py-3 rounded-lg bg-primary text-primary-foreground font-semibold flex items-center justify-center gap-2"
           >
             <Rocket size={18} /> Explore My Work
-          </button>
-          <button
-            onClick={() => scrollTo("problem-solving")}
-            className="glow-btn w-full sm:w-auto px-6 py-3 rounded-lg border border-primary/40 text-primary font-semibold flex items-center justify-center gap-2 hover:bg-primary/10"
-          >
-            <Brain size={18} /> How I Think
           </button>
           <button
             onClick={() => scrollTo("experience")}

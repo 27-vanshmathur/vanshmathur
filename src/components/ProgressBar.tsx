@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-const sections = ["about", "skills", "projects", "experience", "problem-solving", "contact"];
+const sections = ["about", "skills", "projects", "experience", "contact"];
 
 const ProgressBar = () => {
   const [progress, setProgress] = useState(0);
