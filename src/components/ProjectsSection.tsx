@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FolderOpen, X, ArrowRight, Shield, Heart, Activity, MapPin, Bell, Watch } from "lucide-react";
+import { FolderOpen, X, ArrowRight, Shield, Heart, Activity, MapPin, Bell, Watch, Brain, Gauge, LineChart, Sparkles, Repeat, MessageSquare, ExternalLink } from "lucide-react";
 import bharatPulseHero from "@/assets/bharat-pulse-hero.jpg";
 import bharatPulseFall from "@/assets/bharat-pulse-fall.jpg";
 import bharatPulseSos from "@/assets/bharat-pulse-sos.jpg";
+import wealthLensHero from "@/assets/wealthlens-hero.jpg";
 
 interface BasicProject {
   kind: "basic";
@@ -18,7 +19,7 @@ interface BasicProject {
 }
 
 interface CaseStudyProject {
-  kind: "case-study";
+  kind: "case-study" | "wealthlens";
   title: string;
   tag: string;
   brief: string;
@@ -34,6 +35,7 @@ const projects: Project[] = [
     brief:
       "A premium smartwatch experience designed around safety: Fall Detection, SOS, and intelligent health tracking.",
   },
+
   {
     kind: "basic",
     title: "Retail Behavior Analysis – Haldiram's / Samsung / Decathlon",
