@@ -74,7 +74,7 @@ const SkillsSection = () => {
                 )}
               </AnimatePresence>
 
-              <p className="text-xs text-primary/60 mt-2 font-mono">
+              <p className="text-xs text-primary/60 mt-2">
                 {activeSkill === i ? "Click to close" : "Click to explore →"}
               </p>
             </motion.div>
