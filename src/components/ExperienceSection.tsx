@@ -79,7 +79,7 @@ const ExperienceSection = () => {
                 >
                   <div className="flex items-center justify-between">
                     <div>
-                      <span className="text-xs font-mono text-primary">{exp.period}</span>
+                      <span className="text-xs text-primary">{exp.period}</span>
                       <h3 className="font-bold text-lg">{exp.role}</h3>
                       <p className="text-sm text-muted-foreground">{exp.company}</p>
                     </div>

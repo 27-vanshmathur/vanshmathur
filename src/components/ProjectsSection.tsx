@@ -98,7 +98,7 @@ const ProjectsSection = () => {
               }}
               className="glass-card p-6 cursor-pointer card-lift group"
             >
-              <span className="text-xs font-mono text-primary bg-primary/10 px-3 py-1 rounded-full">{project.tag}</span>
+              <span className="text-xs text-primary bg-primary/10 px-3 py-1 rounded-full">{project.tag}</span>
               <h3 className="font-bold text-xl mt-4 mb-2 group-hover:text-primary transition-colors">{project.title}</h3>
               <p className="text-sm text-muted-foreground mb-4">{project.brief}</p>
               <span className="text-primary text-sm font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">
@@ -160,7 +160,7 @@ const BasicCaseStudy = ({
   <div className="p-8">
     <div className="flex justify-between items-start mb-6">
       <div>
-        <span className="text-xs font-mono text-primary bg-primary/10 px-3 py-1 rounded-full">{project.tag}</span>
+        <span className="text-xs text-primary bg-primary/10 px-3 py-1 rounded-full">{project.tag}</span>
         <h3 className="text-2xl sm:text-3xl font-bold mt-3">{project.title}</h3>
       </div>
       <CloseBtn onClose={onClose} />
@@ -228,7 +228,7 @@ const BharatPulseCaseStudy = ({ onClose }: { onClose: () => void }) => (
         <CloseBtn onClose={onClose} />
       </div>
       <div className="px-8 pt-12 pb-8 text-center">
-        <span className="text-xs font-mono text-primary bg-primary/10 px-3 py-1 rounded-full">
+        <span className="text-xs text-primary bg-primary/10 px-3 py-1 rounded-full">
           Product Case Study
         </span>
         <h3 className="text-4xl sm:text-5xl font-bold mt-5 tracking-tight">Bharat Pulse</h3>
@@ -374,7 +374,7 @@ const BharatPulseCaseStudy = ({ onClose }: { onClose: () => void }) => (
       <ol className="mt-2 space-y-4">
         {journey.map((j) => (
           <li key={j.step} className="glass-card p-5 flex gap-5 items-start">
-            <span className="text-2xl font-bold text-primary font-mono shrink-0 w-12">{j.step}</span>
+            <span className="text-2xl font-bold text-primary shrink-0 w-12">{j.step}</span>
             <div>
               <div className="font-semibold">{j.title}</div>
               <p className="text-sm text-muted-foreground mt-1 leading-relaxed">{j.text}</p>
@@ -416,7 +416,7 @@ const Section = ({
   children: React.ReactNode;
 }) => (
   <div className="px-8 py-12 border-b border-border/30">
-    <div className="text-xs font-mono uppercase tracking-widest text-primary mb-3">{eyebrow}</div>
+    <div className="text-xs uppercase tracking-widest text-primary mb-3">{eyebrow}</div>
     <h4 className="text-2xl sm:text-3xl font-bold tracking-tight mb-5">{title}</h4>
     <div className="text-muted-foreground leading-relaxed text-base max-w-3xl">{children}</div>
   </div>

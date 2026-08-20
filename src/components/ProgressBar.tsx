@@ -52,7 +52,7 @@ const ProgressBar = () => {
           transition={{ duration: 0.5 }}
         />
       </div>
-      <div className="absolute right-4 top-3 text-xs font-mono text-muted-foreground bg-card/80 backdrop-blur-sm px-3 py-1 rounded-full border border-border/50">
+      <div className="absolute right-4 top-3 text-xs text-muted-foreground bg-card/80 backdrop-blur-sm px-3 py-1 rounded-full border border-border/50">
         {progress}% explored
       </div>
     </motion.div>
