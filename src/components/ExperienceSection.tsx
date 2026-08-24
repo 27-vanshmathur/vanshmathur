@@ -4,7 +4,7 @@ import { Briefcase, ChevronDown } from "lucide-react";
 
 const experiences = [
   {
-    role: "Summer Intern — Behavioural Finance & Investor Research",
+    role: "Summer Internship — Wealthpreneur",
     company: "Bajaj Capital Ltd.",
     period: "2026",
     contributions: [
