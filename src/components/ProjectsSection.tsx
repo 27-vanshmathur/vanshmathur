@@ -64,7 +64,14 @@ const projects: Project[] = [
         "Better outreach and engagement, supporting 200+ beneficiaries. Social media following grew 3x in 1 month.",
     },
   },
+  {
+    kind: "wealthlens",
+    title: "WealthLens AI",
+    tag: "AI · FinTech · Consumer Behaviour · Product Strategy",
+    brief: "AI powered investor intelligence dashboard.",
+  },
 ];
+
 
 const ProjectsSection = () => {
   const [activeProject, setActiveProject] = useState<number | null>(null);
