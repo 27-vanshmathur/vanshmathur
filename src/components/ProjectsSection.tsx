@@ -64,7 +64,14 @@ const projects: Project[] = [
         "Better outreach and engagement, supporting 200+ beneficiaries. Social media following grew 3x in 1 month.",
     },
   },
+  {
+    kind: "wealthlens",
+    title: "WealthLens AI",
+    tag: "AI · FinTech · Consumer Behaviour · Product Strategy",
+    brief: "AI powered investor intelligence dashboard.",
+  },
 ];
+
 
 const ProjectsSection = () => {
   const [activeProject, setActiveProject] = useState<number | null>(null);
@@ -136,9 +143,12 @@ const ProjectsSection = () => {
                   setActiveTab={setActiveTab}
                   onClose={() => setActiveProject(null)}
                 />
+              ) : current.kind === "wealthlens" ? (
+                <WealthLensCaseStudy onClose={() => setActiveProject(null)} />
               ) : (
                 <BharatPulseCaseStudy onClose={() => setActiveProject(null)} />
               )}
+
             </motion.div>
           </motion.div>
         )}
@@ -407,6 +417,237 @@ const BharatPulseCaseStudy = ({ onClose }: { onClose: () => void }) => (
     </div>
   </div>
 );
+
+/* ------------------ WealthLens AI case study ------------------ */
+const wlFeatures = [
+  { icon: Brain, title: "AI Portfolio Insights", desc: "AI analyses portfolio information and presents important observations in simple language." },
+  { icon: Gauge, title: "Risk Perception Analysis", desc: "Helps identify whether an investor's perceived risk aligns with the risk profile of their investments." },
+  { icon: Activity, title: "Investor Behaviour Insights", desc: "Highlights behavioural patterns that may influence investment decisions." },
+  { icon: Repeat, title: "SIP Intelligence", desc: "Helps investors understand SIP progress, consistency and long term investment behaviour." },
+  { icon: MessageSquare, title: "Personalised Explanations", desc: "Converts complex financial information into easy to understand explanations." },
+  { icon: LineChart, title: "Portfolio Health Score", desc: "A simple visual score representing overall portfolio health based on selected parameters." },
+];
+
+const wlJourney = [
+  "Investor enters basic investment information",
+  "WealthLens analyses portfolio",
+  "AI identifies behavioural and risk patterns",
+  "Dashboard generates insights",
+  "Investor receives personalised explanations",
+  "Investor makes more informed decisions",
+];
+
+const WealthLensCaseStudy = ({ onClose }: { onClose: () => void }) => {
+  const goTo = (id: string) => {
+    onClose();
+    setTimeout(() => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" }), 150);
+  };
+
+  return (
+    <div className="bg-gradient-to-b from-background via-muted/20 to-background">
+      <div className="relative">
+        <div className="absolute top-4 right-4 z-10">
+          <CloseBtn onClose={onClose} />
+        </div>
+        <div className="px-6 sm:px-8 pt-12 pb-8 text-center">
+          <span className="text-xs text-primary bg-primary/10 px-3 py-1 rounded-full">
+            AI + FinTech + Investor Behaviour + Product Strategy
+          </span>
+          <h3 className="text-4xl sm:text-5xl font-bold mt-5 tracking-tight">WealthLens AI</h3>
+          <p className="mt-4 text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            An AI powered investor intelligence concept designed to simplify mutual fund investing by combining
+            investor behaviour, risk perception, portfolio insights, and personalised explanations into one
+            intuitive dashboard.
+          </p>
+          <p className="mt-4 text-xs text-muted-foreground max-w-2xl mx-auto">
+            An AI powered solution concept developed as part of my PGDM CIP project with reference to Bajaj Capital Ltd.
+            It is a student led concept — not a commercially deployed Bajaj Capital product.
+          </p>
+        </div>
+        <div className="px-4 sm:px-8">
+          <div className="rounded-2xl overflow-hidden border border-border/40 bg-gradient-to-br from-muted/40 to-background">
+            <img
+              src={wealthLensHero}
+              alt="WealthLens AI investor intelligence dashboard concept"
+              width={1920}
+              height={1088}
+              loading="lazy"
+              className="w-full h-auto object-cover"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div className="px-6 sm:px-8 py-10 grid grid-cols-2 sm:grid-cols-4 gap-6 border-b border-border/30">
+        {[
+          { label: "Role", value: "Research & Product Strategy" },
+          { label: "Category", value: "AI + FinTech" },
+          { label: "Focus", value: "Investor Behaviour" },
+          { label: "Format", value: "Concept Dashboard" },
+        ].map((m) => (
+          <div key={m.label}>
+            <div className="text-xs uppercase tracking-widest text-muted-foreground">{m.label}</div>
+            <div className="mt-1 font-semibold">{m.value}</div>
+          </div>
+        ))}
+      </div>
+
+      <Section eyebrow="Context" title="Built from behavioural research.">
+        <p>
+          Developed as part of my PGDM CIP project with reference to Bajaj Capital Ltd. Research focus:{" "}
+          <span className="text-foreground font-semibold">
+            “A Behavioural Analysis of Investor Trust and Risk Perception Towards Mutual Fund Investments.”
+          </span>{" "}
+          The study explored how investor trust, risk perception, financial understanding and behavioural factors
+          influence mutual fund investment decisions. WealthLens AI was conceptualised as a practical AI enabled
+          solution to make investment information easier to understand and more actionable.
+        </p>
+      </Section>
+
+      <Section eyebrow="01 — The Problem" title="Financial information feels complicated.">
+        <p>
+          Mutual fund investors often struggle to understand portfolio performance, risk, market movements and whether
+          their investments align with their personal risk perception. That complexity creates uncertainty and reduces
+          investor confidence.
+        </p>
+      </Section>
+
+      <Section eyebrow="02 — The Insight" title="Decisions are behavioural, not just financial.">
+        <p>
+          Investment decisions are not driven purely by financial returns. Investor trust, risk perception, financial
+          understanding and behavioural responses influence how investors interpret and act on investment information.
+        </p>
+      </Section>
+
+      <Section eyebrow="03 — The Solution" title="Complex data, translated into personal insight.">
+        <p>
+          WealthLens AI is a conceptual AI powered investor intelligence dashboard that translates complex investment
+          information into simple, personalised insights.
+        </p>
+        <ul className="mt-6 grid sm:grid-cols-2 gap-3 text-sm">
+          {[
+            "Portfolio performance",
+            "Risk level",
+            "Investment behaviour",
+            "SIP progress",
+            "Fund level insights",
+            "Risk perception",
+            "Personalised AI explanations",
+          ].map((s) => (
+            <li key={s} className="glass-card p-4 text-foreground/90">• {s}</li>
+          ))}
+        </ul>
+      </Section>
+
+      <Section eyebrow="04 — Key Features" title="Six intelligent building blocks.">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-2">
+          {wlFeatures.map((f) => (
+            <div key={f.title} className="glass-card p-5 card-lift">
+              <f.icon className="text-primary mb-3" size={22} />
+              <div className="font-semibold">{f.title}</div>
+              <p className="text-sm text-muted-foreground mt-1 leading-relaxed">{f.desc}</p>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      <Section eyebrow="05 — User Journey" title="From raw numbers to informed decisions.">
+        <ol className="mt-2 space-y-3">
+          {wlJourney.map((j, i) => (
+            <motion.li
+              key={j}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.05 }}
+              className="glass-card p-4 flex gap-4 items-center"
+            >
+              <span className="text-lg font-bold text-primary shrink-0 w-8">{`0${i + 1}`}</span>
+              <span className="text-sm sm:text-base text-foreground/90">{j}</span>
+            </motion.li>
+          ))}
+        </ol>
+      </Section>
+
+      <Section eyebrow="06 — My Role" title="A student led product and research project.">
+        <div className="grid sm:grid-cols-2 gap-3 text-sm mt-2">
+          {[
+            "Market and consumer research",
+            "Investor behaviour analysis",
+            "Problem identification",
+            "AI solution conceptualisation",
+            "Dashboard and UX thinking",
+            "Product positioning",
+            "Marketing and communication strategy",
+          ].map((r) => (
+            <div key={r} className="glass-card p-4 text-foreground/90">• {r}</div>
+          ))}
+        </div>
+      </Section>
+
+      <Section eyebrow="07 — Expected Impact" title="Potential value, not claimed results.">
+        <div className="grid sm:grid-cols-2 gap-3 text-sm mt-2">
+          {[
+            "Simplifies complex investment information",
+            "Improves investor understanding",
+            "Makes risk easier to interpret",
+            "Encourages more informed decision making",
+            "Creates a more personalised investor experience",
+            "Bridges the gap between financial data and investor understanding",
+          ].map((r) => (
+            <div key={r} className="glass-card p-4 text-foreground/90">• {r}</div>
+          ))}
+        </div>
+      </Section>
+
+      <Section eyebrow="08 — What I Learned" title="Consumer insight to communication.">
+        <div className="flex flex-wrap gap-2 mb-5 text-xs">
+          {["Consumer Insight", "Problem Definition", "AI Solution", "Product Experience", "Communication"].map((s) => (
+            <span key={s} className="px-3 py-1.5 rounded-full bg-primary/10 text-primary font-semibold">{s}</span>
+          ))}
+        </div>
+        <p>
+          Building WealthLens showed me how marketing, consumer behaviour, AI and product thinking work together to
+          solve a real business problem — research uncovers the behaviour, the behaviour defines the problem, AI shapes
+          the solution, product design makes it usable, and communication makes it believable.
+        </p>
+      </Section>
+
+      {/* Interactive CTA */}
+      <div className="px-6 sm:px-8 py-12 text-center border-b border-border/30">
+        <a
+          href="https://chatgpt.com/g/g-6a391c88bc748191834d12f69a6a292c-wealthlens-ai"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-primary-foreground font-semibold text-sm hover:opacity-90 transition-all"
+        >
+          <Sparkles size={16} /> Explore WealthLens AI <ExternalLink size={14} />
+        </a>
+        <p className="mt-3 text-sm text-muted-foreground">Explore the interactive AI concept behind this project.</p>
+      </div>
+
+      {/* Final CTA */}
+      <div className="px-6 sm:px-8 py-12 text-center">
+        <h4 className="text-xl sm:text-2xl font-bold mb-5">Interested in how I approach real business problems?</h4>
+        <div className="flex flex-col sm:flex-row gap-3 justify-center">
+          <button
+            onClick={() => goTo("projects")}
+            className="px-6 py-3 rounded-full glass-card font-semibold text-sm hover:text-primary transition-all"
+          >
+            View More Projects
+          </button>
+          <button
+            onClick={() => goTo("contact")}
+            className="px-6 py-3 rounded-full bg-primary text-primary-foreground font-semibold text-sm hover:opacity-90 transition-all"
+          >
+            Contact Me
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 
 const Section = ({
   eyebrow,
