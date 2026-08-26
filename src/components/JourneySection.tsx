@@ -16,6 +16,7 @@ const milestones = [
     num: "02",
     icon: Briefcase,
     institution: "GGSIPU",
+    college: "Lingayas Lalita Devi Institute of Management & Sciences",
     degree: "Bachelor of Business Administration",
     year: "2022",
     theme: "Business Foundation",
@@ -92,6 +93,9 @@ const JourneySection = () => {
                     </div>
                     <span className="text-xs text-primary">{m.year}</span>
                     <h3 className="font-bold text-lg leading-snug">{m.institution}</h3>
+                    {m.college && (
+                      <p className="text-xs text-muted-foreground/80 italic">{m.college}</p>
+                    )}
                     <p className="text-sm text-muted-foreground">{m.degree}</p>
                     <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{m.description}</p>
                     <span className="inline-block mt-4 text-xs px-3 py-1 rounded-full border border-border/60 bg-muted/40 text-muted-foreground">
