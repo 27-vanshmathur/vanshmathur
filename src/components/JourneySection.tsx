@@ -120,7 +120,7 @@ const JourneySection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.6 }}
-          className="relative ml-12 md:ml-0 md:max-w-2xl md:mx-auto"
+          className="relative mx-auto max-w-2xl"
         >
           <div className="glass-card card-lift p-8 text-center">
             <div className="flex items-center justify-center gap-2 mb-3">
