@@ -16,6 +16,7 @@ const milestones = [
     num: "02",
     icon: Briefcase,
     institution: "GGSIPU",
+    college: "Lingayas Lalita Devi Institute of Management & Sciences",
     degree: "Bachelor of Business Administration",
     year: "2022",
     theme: "Business Foundation",
