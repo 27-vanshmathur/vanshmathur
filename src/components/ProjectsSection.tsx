@@ -19,7 +19,7 @@ interface BasicProject {
 }
 
 interface CaseStudyProject {
-  kind: "case-study" | "wealthlens";
+  kind: "case-study" | "wealthlens" | "crocs";
   title: string;
   tag: string;
   brief: string;
@@ -36,20 +36,13 @@ const projects: Project[] = [
       "A premium smartwatch experience designed around safety: Fall Detection, SOS, and intelligent health tracking.",
   },
   {
-    kind: "basic",
+    kind: "crocs",
     title: "Crocs India",
     tag: "Brand Strategy · Consumer Behaviour · Gen Z · Social Media",
     brief:
       "Decoding how Crocs turned an unconventional product into a culturally relevant and self expressive brand, and developing a Gen Z focused campus strategy.",
-    tabs: {
-      overview:
-        "Crocs built cultural relevance by embracing individuality, customization, humour and community. This project studies the brand through a marketing, consumer psychology and social media lens, and proposes a Gen Z campus strategy called Croc Campus Canvas.",
-      thinking:
-        "I decoded Crocs through three strategic lenses — the Jester archetype (humour and memes), the Creator archetype (Jibbitz and self-expression), and Gen Z campus culture. The insight: 'Come As You Are' made individuality acceptable; 'Croc Campus Canvas' makes it shareable.",
-      outcome:
-        "Developed a campaign-ready framework including campus ambassadorship, UGC challenges, Jibbitz design prompts, social media mechanics, and brand outreach material. Positioned as an independent academic project, not an official Crocs campaign.",
-    },
   },
+
 
 
   {
