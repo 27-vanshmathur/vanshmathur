@@ -19,7 +19,7 @@ interface BasicProject {
 }
 
 interface CaseStudyProject {
-  kind: "case-study" | "wealthlens";
+  kind: "case-study" | "wealthlens" | "crocs";
   title: string;
   tag: string;
   brief: string;
@@ -36,20 +36,13 @@ const projects: Project[] = [
       "A premium smartwatch experience designed around safety: Fall Detection, SOS, and intelligent health tracking.",
   },
   {
-    kind: "basic",
+    kind: "crocs",
     title: "Crocs India",
     tag: "Brand Strategy · Consumer Behaviour · Gen Z · Social Media",
     brief:
       "Decoding how Crocs turned an unconventional product into a culturally relevant and self expressive brand, and developing a Gen Z focused campus strategy.",
-    tabs: {
-      overview:
-        "Crocs built cultural relevance by embracing individuality, customization, humour and community. This project studies the brand through a marketing, consumer psychology and social media lens, and proposes a Gen Z campus strategy called Croc Campus Canvas.",
-      thinking:
-        "I decoded Crocs through three strategic lenses — the Jester archetype (humour and memes), the Creator archetype (Jibbitz and self-expression), and Gen Z campus culture. The insight: 'Come As You Are' made individuality acceptable; 'Croc Campus Canvas' makes it shareable.",
-      outcome:
-        "Developed a campaign-ready framework including campus ambassadorship, UGC challenges, Jibbitz design prompts, social media mechanics, and brand outreach material. Positioned as an independent academic project, not an official Crocs campaign.",
-    },
   },
+
 
 
   {
@@ -159,8 +152,11 @@ const ProjectsSection = () => {
                   setActiveTab={setActiveTab}
                   onClose={() => setActiveProject(null)}
                 />
+              ) : current.kind === "crocs" ? (
+                <CrocsCaseStudy onClose={() => setActiveProject(null)} />
               ) : current.kind === "wealthlens" ? (
                 <WealthLensCaseStudy onClose={() => setActiveProject(null)} />
+
               ) : (
                 <BharatPulseCaseStudy onClose={() => setActiveProject(null)} />
               )}
@@ -665,7 +661,217 @@ const WealthLensCaseStudy = ({ onClose }: { onClose: () => void }) => {
 };
 
 
+/* ------------------ Crocs India case study ------------------ */
+const crocsTabs = ["overview", "thinking", "outcome"] as const;
+type CrocsTab = (typeof crocsTabs)[number];
+
+const CrocsCaseStudy = ({ onClose }: { onClose: () => void }) => {
+  const [tab, setTab] = useState<CrocsTab>("overview");
+
+  const goTo = (id: string) => {
+    onClose();
+    setTimeout(() => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" }), 150);
+  };
+
+  return (
+    <div className="bg-gradient-to-b from-background via-muted/20 to-background">
+      <div className="relative px-6 sm:px-8 pt-12 pb-8 text-center">
+        <div className="absolute top-4 right-4 z-10">
+          <CloseBtn onClose={onClose} />
+        </div>
+        <span className="text-xs text-primary bg-primary/10 px-3 py-1 rounded-full">
+          Brand Strategy · Consumer Behaviour · Gen Z · Social Media
+        </span>
+        <h3 className="text-4xl sm:text-5xl font-bold mt-5 tracking-tight">Crocs India</h3>
+        <p className="mt-4 text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          How an “ugly” shoe became a cultural identity — and how that same self expression can be activated on
+          Indian campuses through <span className="text-foreground font-semibold">Croc Campus Canvas</span>.
+        </p>
+        <p className="mt-4 text-xs text-muted-foreground max-w-2xl mx-auto">
+          An independent academic brand strategy project. Not an official Crocs India campaign. “Your Crocs, Your
+          Rang” is referenced as an existing Crocs India campaign.
+        </p>
+      </div>
+
+      <div className="px-6 sm:px-8 pb-8 grid grid-cols-2 sm:grid-cols-4 gap-6 border-b border-border/30">
+        {[
+          { label: "Role", value: "Brand & Campaign Strategy" },
+          { label: "Category", value: "Fashion / Lifestyle" },
+          { label: "Audience", value: "Gen Z, 18–24" },
+          { label: "Focus", value: "Self Expression" },
+        ].map((m) => (
+          <div key={m.label}>
+            <div className="text-xs uppercase tracking-widest text-muted-foreground">{m.label}</div>
+            <div className="mt-1 font-semibold">{m.value}</div>
+          </div>
+        ))}
+      </div>
+
+      {/* Tabs */}
+      <div className="px-6 sm:px-8 pt-8">
+        <div className="flex flex-wrap gap-2 border-b border-border/50 pb-3">
+          {crocsTabs.map((t) => (
+            <button
+              key={t}
+              onClick={() => setTab(t)}
+              className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all capitalize ${
+                tab === t
+                  ? "bg-primary text-primary-foreground"
+                  : "text-muted-foreground hover:text-foreground hover:bg-muted"
+              }`}
+            >
+              {t === "thinking" ? "My Thinking" : t}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <motion.div key={tab} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }}>
+        {tab === "overview" && (
+          <>
+            <Section eyebrow="Problem" title="Individuality is accepted, but not activated.">
+              <p>
+                Crocs India has already made self expression acceptable through “Come As You Are” and “Your Crocs,
+                Your Rang”. But among Indian college students, Crocs is still bought as a comfort shoe first. The
+                brand owns comfort and quirk, yet the everyday cultural moment — the campus — remains unclaimed.
+                There is a visible gap between <span className="text-foreground font-semibold">“My Crocs”</span>{" "}
+                (personal styling) and <span className="text-foreground font-semibold">“Our Crocs”</span> (shared
+                community identity).
+              </p>
+            </Section>
+
+            <Section eyebrow="Context" title="An unconventional product turned identity object.">
+              <ul className="space-y-3 list-disc pl-5">
+                <li>Crocs won by leaning into being polarising instead of apologising for it.</li>
+                <li>Jibbitz turned a mass produced clog into a personal canvas.</li>
+                <li>Meme culture and collabs made the brand feel in on the joke.</li>
+                <li>Comfort became a lifestyle stance, not a compromise.</li>
+              </ul>
+            </Section>
+          </>
+        )}
+
+        {tab === "thinking" && (
+          <>
+            <Section eyebrow="Insight" title="Gen Z doesn’t buy shoes, they buy signals.">
+              <p className="mb-5">
+                I decoded the brand through three lenses:
+              </p>
+              <div className="grid sm:grid-cols-3 gap-4 not-prose">
+                {[
+                  { t: "The Jester", d: "Humour, memes and self aware quirk make the brand socially safe to love." },
+                  { t: "The Creator", d: "Jibbitz convert a product into a personal, editable identity statement." },
+                  { t: "Campus Culture", d: "College is where Gen Z identity is performed, copied and amplified." },
+                ].map((c) => (
+                  <div key={c.t} className="glass-card p-5">
+                    <div className="font-semibold mb-2 text-foreground">{c.t}</div>
+                    <p className="text-sm text-muted-foreground">{c.d}</p>
+                  </div>
+                ))}
+              </div>
+              <p className="mt-6">
+                The core insight: <span className="text-foreground font-semibold">“Come As You Are” made
+                individuality acceptable. “Croc Campus Canvas” makes it shareable.</span>
+              </p>
+            </Section>
+
+            <Section eyebrow="Strategy" title="Croc Campus Canvas.">
+              <p className="mb-5">
+                A campus first activation that turns individual styling into collective culture — every campus
+                becomes a canvas, every student becomes a creator.
+              </p>
+              <div className="space-y-4">
+                {[
+                  { n: "01", t: "Campus Ambassadors", d: "Student creators host styling drops and represent their campus identity." },
+                  { n: "02", t: "Jibbitz Design Prompts", d: "Monthly themes — exam week, fest season, hostel life — spark personal charm stories." },
+                  { n: "03", t: "UGC Challenges", d: "Campus vs campus styling battles with a shared hashtag and reposts on brand handles." },
+                  { n: "04", t: "Fest Activations", d: "Pop up Jibbitz bars at college fests convert participation into product trial." },
+                  { n: "05", t: "Creator Loop", d: "Best student content gets amplified, pulling the next wave of creators in." },
+                ].map((s) => (
+                  <div key={s.n} className="flex gap-4">
+                    <div className="text-primary font-bold">{s.n}</div>
+                    <div>
+                      <div className="font-semibold text-foreground">{s.t}</div>
+                      <p className="text-sm">{s.d}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </Section>
+
+            <Section eyebrow="Social Media Strategy" title="Instagram as the playground.">
+              <ul className="space-y-3 list-disc pl-5">
+                <li><span className="text-foreground font-semibold">Reels:</span> styling transitions, hostel room to campus walk.</li>
+                <li><span className="text-foreground font-semibold">Carousels:</span> “what your Jibbitz say about you” identity content.</li>
+                <li><span className="text-foreground font-semibold">Stories:</span> polls, charm voting, campus leaderboards.</li>
+                <li><span className="text-foreground font-semibold">Creator seeding:</span> micro campus creators over celebrity spend.</li>
+              </ul>
+            </Section>
+          </>
+        )}
+
+        {tab === "outcome" && (
+          <>
+            <Section eyebrow="Result" title="A campaign ready framework, not a slide deck.">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mb-6">
+                {[
+                  { v: "3", l: "Strategic lenses" },
+                  { v: "5", l: "Campaign mechanics" },
+                  { v: "1", l: "Ownable platform idea" },
+                  { v: "Gen Z", l: "Audience focus" },
+                ].map((m) => (
+                  <div key={m.l}>
+                    <div className="text-3xl font-bold text-primary">{m.v}</div>
+                    <div className="text-xs uppercase tracking-widest text-muted-foreground mt-1">{m.l}</div>
+                  </div>
+                ))}
+              </div>
+              <p>
+                The project delivered a complete, executable Gen Z strategy: positioning rationale, the Croc Campus
+                Canvas platform, campus ambassadorship model, UGC and Jibbitz mechanics, a social content system, and
+                brand outreach material — all built on documented consumer behaviour rather than assumption.
+              </p>
+            </Section>
+
+            <Section eyebrow="What I Learned" title="Culture is built, not bought.">
+              <div className="flex flex-wrap gap-2 mb-5 text-xs">
+                {["Brand Strategy", "Consumer Behaviour", "Gen Z Insight", "Campaign Thinking", "Creative Communication"].map((s) => (
+                  <span key={s} className="px-3 py-1.5 rounded-full bg-primary/10 text-primary font-semibold">{s}</span>
+                ))}
+              </div>
+              <p>
+                Crocs taught me that the strongest brands don’t chase relevance — they give people a way to express
+                who they already are. Strategy’s job is to hand the audience the canvas and get out of the way.
+              </p>
+            </Section>
+          </>
+        )}
+      </motion.div>
+
+      {/* Final CTA */}
+      <div className="px-6 sm:px-8 py-12 text-center">
+        <h4 className="text-xl sm:text-2xl font-bold mb-5">Want to see how I build brand strategy end to end?</h4>
+        <div className="flex flex-col sm:flex-row gap-3 justify-center">
+          <button
+            onClick={() => goTo("projects")}
+            className="px-6 py-3 rounded-full glass-card font-semibold text-sm hover:text-primary transition-all"
+          >
+            View More Projects
+          </button>
+          <button
+            onClick={() => goTo("contact")}
+            className="px-6 py-3 rounded-full bg-primary text-primary-foreground font-semibold text-sm hover:opacity-90 transition-all"
+          >
+            Contact Me
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const Section = ({
+
   eyebrow,
   title,
   children,
