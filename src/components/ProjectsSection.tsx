@@ -152,8 +152,11 @@ const ProjectsSection = () => {
                   setActiveTab={setActiveTab}
                   onClose={() => setActiveProject(null)}
                 />
+              ) : current.kind === "crocs" ? (
+                <CrocsCaseStudy onClose={() => setActiveProject(null)} />
               ) : current.kind === "wealthlens" ? (
                 <WealthLensCaseStudy onClose={() => setActiveProject(null)} />
+
               ) : (
                 <BharatPulseCaseStudy onClose={() => setActiveProject(null)} />
               )}
