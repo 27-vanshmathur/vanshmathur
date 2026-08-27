@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Eye, Star, Trophy, Download, X } from "lucide-react";
+import { Eye, Star, Trophy, Download, X, ExternalLink } from "lucide-react";
+import resumeAsset from "@/assets/resume.pdf.asset.json";
 
 const RecruiterSection = () => {
   const [open, setOpen] = useState(false);
@@ -34,12 +35,21 @@ const RecruiterSection = () => {
               onClick={(e) => e.stopPropagation()}
               className="glass-card w-full max-w-lg p-8"
             >
-              <div className="flex justify-between items-center mb-6">
+              <div className="flex justify-between items-center mb-4">
                 <h3 className="text-2xl font-bold gradient-text">Why Hire Vansh?</h3>
                 <button onClick={() => setOpen(false)} className="p-2 rounded-lg hover:bg-muted text-muted-foreground">
                   <X size={18} />
                 </button>
               </div>
+
+              <a
+                href={resumeAsset.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="glow-btn mb-6 w-full py-3 rounded-lg bg-secondary text-secondary-foreground font-semibold flex items-center justify-center gap-2"
+              >
+                <ExternalLink size={16} /> Open Resume
+              </a>
 
               <div className="space-y-5">
                 <div className="flex items-start gap-3">
@@ -72,9 +82,13 @@ const RecruiterSection = () => {
                 </div>
               </div>
 
-              <button className="glow-btn mt-8 w-full py-3 rounded-lg bg-primary text-primary-foreground font-semibold flex items-center justify-center gap-2">
+              <a
+                href={resumeAsset.url}
+                download="Vansh-Mathur-Resume.pdf"
+                className="glow-btn mt-6 w-full py-3 rounded-lg bg-primary text-primary-foreground font-semibold flex items-center justify-center gap-2"
+              >
                 <Download size={16} /> Download Resume
-              </button>
+              </a>
             </motion.div>
           </motion.div>
         )}
