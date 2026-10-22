@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Sun, Moon } from "lucide-react";
+import { useExploredProgress } from "@/hooks/useExploredProgress";
 
 const navLinks = [
   { label: "About", id: "about" },
