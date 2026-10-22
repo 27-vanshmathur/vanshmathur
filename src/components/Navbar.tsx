@@ -16,6 +16,7 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [active, setActive] = useState("");
   const [isDark, setIsDark] = useState(() => !document.documentElement.classList.contains("light"));
+  const progress = useExploredProgress();
 
   const toggleTheme = () => {
     const next = !isDark;
