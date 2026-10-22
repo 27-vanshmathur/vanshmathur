@@ -71,9 +71,16 @@ const Navbar = () => {
       }`}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-14">
-        <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="text-lg font-bold gradient-text">
-          VM
-        </button>
+        <div className="flex items-center gap-2">
+          <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="text-lg font-bold gradient-text">
+            VM
+          </button>
+          {progress > 0 && (
+            <span className="text-[10px] sm:text-xs text-muted-foreground bg-card/80 backdrop-blur-sm px-2 py-0.5 rounded-full border border-border/50 whitespace-nowrap">
+              {progress}% explored
+            </span>
+          )}
+        </div>
         <div className="hidden sm:flex items-center gap-1">
           {navLinks.map(({ label, id }) => (
             <button
