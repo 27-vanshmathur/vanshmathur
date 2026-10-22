@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Eye, Star, Trophy, Download, X, ExternalLink } from "lucide-react";
-import resumeAsset from "@/assets/resume.pdf.asset.json";
+import resumeAsset from "@/assets/resume-new.pdf.asset.json";
 
 const RecruiterSection = () => {
   const [open, setOpen] = useState(false);
